@@ -4,24 +4,24 @@ import { useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 //  Custom hook for fetching
-import { useFetch } from '../hooks/useFetch';
+import { useFetch } from '../../hooks/useFetch';
 
 //  Redux 
 import { useSelector, useDispatch } from 'react-redux'
-import { addFavorite } from '../features/user/userSlice';
+import { addFavorite } from '../../features/user/userSlice';
 
 //  Loader
 import { DotSpinner } from '@uiball/loaders';
 
 //  Components
-import { Container } from '../components/Container';
-import { YoutubePlayer } from '../components/YoutubePlayer';
-import { Table } from '../components/Table';
-import { Subtitle } from '../components/Subtitle';
-import { Paragraph } from '../components/Paragraph';
-import { Title } from '../components/Title';
-import { Button } from '../components/Button';
-import { Alert } from '../components/Alert';
+import { Container } from '../../components/Container';
+import { YoutubePlayer } from '../../components/YoutubePlayer';
+import { Table } from '../../components/Table';
+import { Subtitle } from '../../components/Subtitle';
+import { Paragraph } from '../../components/Paragraph';
+import { Title } from '../../components/Title';
+import { Button } from '../../components/Button';
+import { Alert } from '../../components/Alert';
 
 export const DishDetail = () => {
     const { id } = useParams();

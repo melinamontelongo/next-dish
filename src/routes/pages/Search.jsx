@@ -9,15 +9,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { AiOutlineSearch } from "react-icons/ai";
 
 //  Components
-import { Container } from "../components/Container";
-import { FormControl } from "../components/FormControl";
-import { Button } from "../components/Button";
-import { Card } from "../components/Card";
-import { Title } from "../components/Title";
-import { Message } from "../components/Message";
+import { Container } from "../../components/Container";
+import { FormControl } from "../../components/FormControl";
+import { Button } from "../../components/Button";
+import { Card } from "../../components/Card";
+import { Title } from "../../components/Title";
+import { Message } from "../../components/Message";
 
 //  Search validation
-import { searchSchema } from '../utils/validationSchemas';
+import { searchSchema } from '../../utils/validationSchemas';
 
 export const Search = () => {
     const navigate = useNavigate();

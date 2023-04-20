@@ -1,8 +1,13 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import { GiKnifeFork } from "react-icons/gi"
+import { GiKnifeFork } from "react-icons/gi";
+
+import { routeVariants } from "../../utils/animationVariants";
+
 export const Home = () => {
     return (<>
-        <div className="hero min-h-screen" style={{ backgroundImage: `url("nextdish_hero.jpg")` }}>
+        <motion.div variants={routeVariants}  initial="hidden" animate="visible" 
+            className="hero min-h-screen" style={{ backgroundImage: `url("nextdish_hero.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
@@ -13,7 +18,7 @@ export const Home = () => {
                     </NavLink>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </>
     );
 };

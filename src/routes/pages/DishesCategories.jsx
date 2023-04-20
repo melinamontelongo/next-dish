@@ -2,15 +2,15 @@
 import { useParams, useNavigate } from 'react-router-dom';
 
 //  Custom hook for fetching
-import { useFetch } from '../hooks/useFetch';
+import { useFetch } from '../../hooks/useFetch';
 
 //  Loader
 import { DotSpinner } from '@uiball/loaders';
 
 //  Components
-import { Card } from '../components/Card';
-import { Container } from '../components/Container';
-import { Title } from '../components/Title';
+import { Card } from '../../components/Card';
+import { Container } from '../../components/Container';
+import { Title } from '../../components/Title';
 
 export const DishesCategories = () => {
 

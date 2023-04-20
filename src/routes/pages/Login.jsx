@@ -6,27 +6,26 @@ import { NavLink, useNavigate } from "react-router-dom";
 //  React Hook Form
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { string, z } from "zod";
 
 //  Redux
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUser } from "../features/user/userSlice";
+import { loginUser } from "../../features/user/userSlice";
 
 //  Components
-import { Container } from "../components/Container";
-import { FormControl } from "../components/FormControl";
-import { Title } from "../components/Title";
-import { Paragraph } from "../components/Paragraph";
-import { Button } from "../components/Button";
-import { Checkbox } from "../components/Checkbox";
-import { Alert } from "../components/Alert";
+import { Container } from "../../components/Container";
+import { FormControl } from "../../components/FormControl";
+import { Title } from "../../components/Title";
+import { Paragraph } from "../../components/Paragraph";
+import { Button } from "../../components/Button";
+import { Checkbox } from "../../components/Checkbox";
+import { Alert } from "../../components/Alert";
 
 //  Icons
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { FaUserAlt } from 'react-icons/fa';
 
 //  Validation schema
-import { loginSchema } from "../utils/validationSchemas";
+import { loginSchema } from "../../utils/validationSchemas";
 
 export const Login = () => {
     //  Routing

@@ -2,16 +2,16 @@ import { useRef, useState } from "react";
 
 //  Redux
 import { useDispatch, useSelector } from 'react-redux';
-import { editUser } from "../features/user/userSlice";
+import { editUser } from "../../features/user/userSlice";
 
 //  Components
-import { Container } from "../components/Container";
-import { FormControl } from "../components/FormControl";
-import { Paragraph } from "../components/Paragraph";
-import { Button } from "../components/Button";
-import { Subtitle } from "../components/Subtitle";
-import { Title } from "../components/Title";
-import { Alert } from "../components/Alert";
+import { Container } from "../../components/Container";
+import { FormControl } from "../../components/FormControl";
+import { Paragraph } from "../../components/Paragraph";
+import { Button } from "../../components/Button";
+import { Subtitle } from "../../components/Subtitle";
+import { Title } from "../../components/Title";
+import { Alert } from "../../components/Alert";
 
 //  React Hook Form
 import { useForm } from "react-hook-form";
@@ -24,7 +24,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 
 //  Profile validation schema
-import { profileSchema } from "../utils/validationSchemas";
+import { profileSchema } from "../../utils/validationSchemas";
 
 export const Profile = () => {
     //  Form handling

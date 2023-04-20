@@ -10,23 +10,23 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 //  Redux
 import { useDispatch, useSelector } from 'react-redux';
-import { registerUser } from "../features/user/userSlice";
+import { registerUser } from "../../features/user/userSlice";
 
 //  Components
-import { Button } from "../components/Button";
-import { FormControl } from "../components/FormControl";
-import { Title } from "../components/Title";
-import { Alert } from "../components/Alert";
+import { Button } from "../../components/Button";
+import { FormControl } from "../../components/FormControl";
+import { Title } from "../../components/Title";
+import { Alert } from "../../components/Alert";
+import { Container } from "../../components/Container";
 
 //  Icons
 import { FaPencilAlt } from "react-icons/fa";
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { MdAlternateEmail } from 'react-icons/md';
 import { FaUserAlt } from 'react-icons/fa';
-import { Container } from "../components/Container";
 
 //  Validation schema
-import { signUpSchema } from "../utils/validationSchemas";
+import { signUpSchema } from "../../utils/validationSchemas";
 
 export const SignUp = () => {
 

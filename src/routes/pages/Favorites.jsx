@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 
 //  Redux
 import { useDispatch, useSelector } from 'react-redux';
-import { removeFavorite } from "../features/user/userSlice";
+import { removeFavorite } from "../../features/user/userSlice";
 
 //  Components
-import { Container } from "../components/Container";
-import { Card } from '../components/Card';
-import { Button } from '../components/Button';
-import { Message } from "../components/Message";
-import { Title } from '../components/Title';
+import { Container } from "../../components/Container";
+import { Card } from '../../components/Card';
+import { Button } from '../../components/Button';
+import { Message } from "../../components/Message";
+import { Title } from '../../components/Title';
 
 export const Favorites = () => {
 

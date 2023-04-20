@@ -1,7 +1,7 @@
 //  Components
-import { Container } from "../components/Container";
-import { Paragraph } from "../components/Paragraph";
-import { Title } from "../components/Title";
+import { Container } from "../../components/Container";
+import { Paragraph } from "../../components/Paragraph";
+import { Title } from "../../components/Title";
 
 export const About = () => {
     return (
