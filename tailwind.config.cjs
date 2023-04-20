@@ -9,14 +9,6 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["retro"
-/*       {
-        light: {
-          ...require("daisyui/src/colors/themes")["[data-theme=valentine]"],
-          "base-100": "#0000",
-          neutral: "#0000",
-        },
-      }, */
-    ],
+    themes: ["retro"],
   },
 }
