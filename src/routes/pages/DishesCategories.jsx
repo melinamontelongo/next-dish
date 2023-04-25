@@ -1,5 +1,5 @@
 //  Routing
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, NavLink } from 'react-router-dom';
 
 //  Custom hook for fetching
 import { useFetch } from '../../hooks/useFetch';
@@ -11,14 +11,15 @@ import { DotSpinner } from '@uiball/loaders';
 import { Card } from '../../components/Card';
 import { Container } from '../../components/Container';
 import { Title } from '../../components/Title';
+import { Breadcrumb } from '../../components/Breadcrumb';
 
 export const DishesCategories = () => {
 
     const { category } = useParams();
     const { data, loading } = useFetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`, `${category}_category`);
-    
+
     const navigate = useNavigate();
-    
+
     const clickHandler = (id) => {
         navigate(`/dishes/${category}/${id}`);
     }
@@ -26,13 +27,22 @@ export const DishesCategories = () => {
     return (
         <Container>
             <Title>{category && category} Dishes</Title>
-                    {loading && <div className="grid place-content-center">
-                        <DotSpinner
-                            size={40}
-                            speed={0.9}
-                            color="#7d7259"
-                        />
-                    </div>}
+            <Breadcrumb>
+                <li>
+                    <NavLink to="/dishes">Categories
+                    </NavLink>
+                </li>
+                <li>{category && category} Dishes</li>
+            </Breadcrumb>
+            {
+                loading && <div className="grid place-content-center">
+                    <DotSpinner
+                        size={40}
+                        speed={0.9}
+                        color="#7d7259"
+                    />
+                </div>
+            }
             <div className="flex justify-center">
                 <div className="grid md:grid-cols-2 xl:grid-cols-3">
                     {data?.meals?.map((item) => {
@@ -48,6 +58,6 @@ export const DishesCategories = () => {
                     })}
                 </div>
             </div>
-        </Container>
+        </Container >
     );
 };

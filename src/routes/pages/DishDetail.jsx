@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
-//  Routing (to get url parameter)
-import { useParams } from 'react-router-dom';
+//  Routing
+import { useParams, NavLink } from 'react-router-dom';
 
 //  Custom hook for fetching
 import { useFetch } from '../../hooks/useFetch';
@@ -22,6 +22,7 @@ import { Paragraph } from '../../components/Paragraph';
 import { Title } from '../../components/Title';
 import { Button } from '../../components/Button';
 import { Alert } from '../../components/Alert';
+import { Breadcrumb } from '../../components/Breadcrumb';
 
 export const DishDetail = () => {
     const { id } = useParams();
@@ -66,9 +67,17 @@ export const DishDetail = () => {
         })
         return table;
     };
-
     return (
         <Container>
+            <Breadcrumb>
+                <li>
+                    <NavLink to="/dishes">Categories</NavLink>
+                </li>
+                <li>
+                    <NavLink to={`/dishes/${data?.meals[0]?.strCategory}`}>{data?.meals[0]?.strCategory} Dishes</NavLink>
+                </li>
+                <li>{data?.meals[0]?.strMeal}</li>
+            </Breadcrumb>
             <div className="flex justify-center opacity-0 fixed top-50 left-0 right-0 z-50" ref={alertContainer}>
                 <Alert isError={!addSuccess} text={addSuccess ? "Successfully added to your favorites!" : !addSuccess & user[0] === undefined ? "You need to be logged in to do this." : "Seems like this item is already on your favorites."} />
             </div>
